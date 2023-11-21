@@ -72,3 +72,6 @@ select  * from game;
       FOREIGN KEY(id_player) REFERENCES Player(id),
       FOREIGN KEY(id_franchise) REFERENCES Franchise(id)
    );
+
+select * from game where id_franchise1 = 'FRCH0002' or id_franchise2 = 'FRCH0002';
+select * from game where id_franchise1 = 'FRCH0002';

@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import com.etu1999.rojows.domain.Franchise;
+import com.etu1999.rojows.domain.Game;
 import com.etu1999.rojows.domain.Player;
 
 
@@ -19,4 +20,13 @@ public interface FranchiseRepository extends JpaRepository<Franchise, String> {
     "JOIN Franchise f ON f.id = pf.franchise.id " +
     "WHERE f.id = :franchiseId")
     public List<Player> findPlayerByFranchiseId(@Param("franchiseId") String id_franchise);
+
+    @Query("select * from game where id_franchise1 = :franchiseId or id_franchise2 = :franchiseId")
+    public List<Game> findGameByFranchiseId(@Param("franchiseId") String id_franchise);
+
+    @Query("select * from game where id_franchise1 = :franchiseId")
+    public List<Game> findOutsideGameByFranchiseId(@Param("franchiseId") String id_franchise);
+
+    @Query("select * from game where id_franchise2 = :franchiseId")
+    public List<Game> findHomeGameByFranchiseId(@Param("franchiseId") String id_franchise);
 }

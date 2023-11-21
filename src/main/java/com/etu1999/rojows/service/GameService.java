@@ -25,8 +25,7 @@ public class GameService {
 
     public List<Game> findAll(){
         List<Game> first_result = gameRepository.findAll();
-        for (Game game : first_result)
-            initGameStat(game);
+        initGamesStat(first_result);
         return first_result;
     }
 
@@ -50,7 +49,25 @@ public class GameService {
         return game;
     }
 
+    protected List<Game> initGamesStat(List<Game> games){
+        for (Game game : games)
+            initGameStat(game);
+        return games;
+    }
+
+    public List<Game> findGameByFranchiseId(String id_franchise){
+        return gameRepository.findGameByFranchiseId(id_franchise);
+    }
+
     public List<Game> findBySeason(String id_season){
         return gameRepository.findBySeason_id(id_season);
+    }
+
+    public List<Game> findHomeGameByFranchiseId(String id_franchise){
+        return initGamesStat(gameRepository.findHomeGameByFranchiseId(id_franchise));
+    }
+
+    public List<Game> findOutsideGameByFranchiseId(String id_franchise){
+        return initGamesStat(gameRepository.findOutsideGameByFranchiseId(id_franchise));
     }
 }
