@@ -1,3 +1,5 @@
+CREATE DATABASE basket;
+\C basket;
 
    CREATE TABLE Player(
       id VARCHAR(50) ,
