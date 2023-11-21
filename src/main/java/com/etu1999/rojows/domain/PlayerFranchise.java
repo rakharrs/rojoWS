@@ -30,5 +30,4 @@ public class PlayerFranchise {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_franchise", nullable = false)
     private Franchise franchise;
-
 }
