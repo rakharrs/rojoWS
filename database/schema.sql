@@ -9,6 +9,8 @@ CREATE DATABASE basket;
       PRIMARY KEY(id)
    );
 
+
+
    CREATE TABLE Franchise(
       id VARCHAR(50) ,
       franchise_name VARCHAR(50) ,
@@ -20,53 +22,51 @@ CREATE DATABASE basket;
       id VARCHAR(50) ,
       type_season VARCHAR(50) ,
       season_debut DATE NOT NULL,
-      season_end DATE NOT NULL,d
+      season_end DATE NOT NULL,
       PRIMARY KEY(id)
    );
 
-   CREATE TABLE Role(
-      id VARCHAR(50) ,
-      role_name VARCHAR(50)  NOT NULL,
-      id_player VARCHAR(50)  NOT NULL,
-      PRIMARY KEY(id),
-      FOREIGN KEY(id_player) REFERENCES Player(id)
-   );
+   -- CREATE TABLE Role(
+   --   id VARCHAR(50) ,
+      --role_name VARCHAR(50)  NOT NULL,
+      --id_player VARCHAR(50)  NOT NULL,
+      --PRIMARY KEY(id),
+      --FOREIGN KEY(id_player) REFERENCES Player(id)
+   --);
 
    CREATE TABLE Action(
-      sigle VARCHAR(50) ,
+      id VARCHAR(50) ,
       action_name VARCHAR(50) ,
-      action_value INTEGER,
-      PRIMARY KEY(sigle)
+      PRIMARY KEY(id)
    );
 
-   CREATE TABLE Game(   
-      id_game VARCHAR(50) ,
-      game_start TIMESTAMP NOT NULL,
-      game_end TIMESTAMP NOT NULL,
-      franchise_1 VARCHAR(50) REFERENCES Franchise(id_franchise),
-      franchise_2 VARCHAR(50) REFERENCES Franchise(id_franchise),
+   CREATE TABLE Game(
+      id VARCHAR(50),
+      -- game_start TIMESTAMP NOT NULL,
+      -- game_end TIMESTAMP NOT NULL,
+      franchise_1 VARCHAR(50) REFERENCES Franchise(id),
+      franchise_2 VARCHAR(50) REFERENCES Franchise(id),
       id_saison VARCHAR(50)  NOT NULL,
-      PRIMARY KEY(id_game),
-      FOREIGN KEY(id_saison) REFERENCES Season(id_saison)
+      PRIMARY KEY(id),
+      FOREIGN KEY(id_saison) REFERENCES Season(id)
    );
 
    CREATE TABLE Statistics(
-      id_action VARCHAR(50) ,
+      id VARCHAR(50) ,
       id_player VARCHAR(50)  NOT NULL,
       id_game VARCHAR(50)  NOT NULL,
-      sigle VARCHAR(50)  NOT NULL,
-      PRIMARY KEY(id_action),
-      FOREIGN KEY(id_player) REFERENCES Player(id_player),
-      FOREIGN KEY(id_game) REFERENCES Game(id_game),
-      FOREIGN KEY(sigle) REFERENCES Action(sigle)
+      id_action VARCHAR(50)  NOT NULL,
+      PRIMARY KEY(id),
+      FOREIGN KEY(id_player) REFERENCES Player(id),
+      FOREIGN KEY(id_game) REFERENCES Game(id),
+      FOREIGN KEY(id_action) REFERENCES Action(id)
    );
 
    CREATE TABLE Player_franchise(
+      id varchar(50) primary key ,
       id_player VARCHAR(50) ,
-      date_arrivee DATE NOT NULL,
-      date_depart DATE NOT NULL,
+      date_arrivee DATE NOT NULL,       -- Date d'arrivee dans la franchise
       id_franchise VARCHAR(50)  NOT NULL,
-      PRIMARY KEY(id_player),
-      FOREIGN KEY(id_player) REFERENCES Player(id_player),
-      FOREIGN KEY(id_franchise) REFERENCES Franchise(id_franchise)
+      FOREIGN KEY(id_player) REFERENCES Player(id),
+      FOREIGN KEY(id_franchise) REFERENCES Franchise(id)
    );
