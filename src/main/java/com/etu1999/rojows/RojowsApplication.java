@@ -9,5 +9,4 @@ public class RojowsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RojowsApplication.class, args);
 	}
-
 }
