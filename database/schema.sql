@@ -1,5 +1,3 @@
-CREATE DATABASE basket;
-\C basket
 
    CREATE TABLE Player(
       id VARCHAR(50) ,
@@ -44,11 +42,11 @@ CREATE DATABASE basket;
       id VARCHAR(50),
       -- game_start TIMESTAMP NOT NULL,
       -- game_end TIMESTAMP NOT NULL,
-      franchise_1 VARCHAR(50) REFERENCES Franchise(id),
-      franchise_2 VARCHAR(50) REFERENCES Franchise(id),
-      id_saison VARCHAR(50)  NOT NULL,
+      id_franchise1 VARCHAR(50) REFERENCES Franchise(id),
+      id_franchise2 VARCHAR(50) REFERENCES Franchise(id),
+      id_season VARCHAR(50)  NOT NULL,
       PRIMARY KEY(id),
-      FOREIGN KEY(id_saison) REFERENCES Season(id)
+      FOREIGN KEY(id_season) REFERENCES Season(id)
    );
 
    CREATE TABLE Statistics(
