@@ -31,7 +31,7 @@ public class Season {
     @Column(name = "season_end",  nullable = false)
     private Date seasonEnd;
 
-    @OneToMany(mappedBy = "season")
-    private List<Game> saisonGames;
+    /*@OneToMany(mappedBy = "season")
+    private List<Game> saisonGames;*/
 
 }

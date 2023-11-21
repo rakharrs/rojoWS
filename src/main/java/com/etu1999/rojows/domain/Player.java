@@ -30,8 +30,4 @@ public class Player {
 
     @Column(nullable = false)
     private Date birthdate;
-
-    @OneToMany(mappedBy = "player")
-    private List<PlayerFranchise> playerPlayerFranchis;
-
 }

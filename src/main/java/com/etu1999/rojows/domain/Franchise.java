@@ -25,11 +25,4 @@ public class Franchise {
 
     @Column(nullable = false, length = 50)
     private String siege;
-
-    @OneToMany(mappedBy = "franchise1")
-    private List<Game> homeGames;
-
-    @OneToMany(mappedBy = "franchise2")
-    private List<Game> outsideGame;
-
 }

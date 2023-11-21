@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.etu1999.rojows.domain.Franchise;
+import com.etu1999.rojows.domain.Player;
 import com.etu1999.rojows.repository.FranchiseRepository;
 
 @Service
@@ -17,5 +18,9 @@ public class FranchiseService {
 
     public List<Franchise> findAll(){
         return franchiseRepository.findAll();
+    }
+
+    public List<Player> getPlayers(String id){
+        return franchiseRepository.findPlayerByFranchiseId(id);
     }
 }
