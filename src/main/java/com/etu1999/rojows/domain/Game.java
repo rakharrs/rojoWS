@@ -23,19 +23,16 @@ public class Game {
     @Column(nullable = false, updatable = false, length = 50)
     private String id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_franchise1")
     private Franchise franchise1;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_franchise2")
     private Franchise franchise2;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_season", nullable = false)
     private Season season;
-
-    @OneToMany(mappedBy = "game")
-    private List<Statistics> gameStatisticses;
 
 }

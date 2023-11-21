@@ -51,6 +51,8 @@ CREATE DATABASE basket;
       FOREIGN KEY(id_season) REFERENCES Season(id)
    );
 
+select  * from game;
+
    CREATE TABLE Statistics(
       id VARCHAR(50) ,
       id_player VARCHAR(50)  NOT NULL,

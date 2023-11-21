@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Transient;
 
 import java.util.List;
 import java.util.Set;
@@ -25,4 +26,7 @@ public class Franchise {
 
     @Column(nullable = false, length = 50)
     private String siege;
+
+    @Transient
+    private List<Player> players;
 }

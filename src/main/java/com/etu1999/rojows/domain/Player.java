@@ -4,11 +4,15 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Transient;
 
 import java.sql.Date;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.Set;
+
+import com.etu1999.rojows.stats.PlayerStatistic;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,4 +34,7 @@ public class Player {
 
     @Column(nullable = false)
     private Date birthdate;
+
+    @Transient
+    private PlayerStatistic statistic;
 }
