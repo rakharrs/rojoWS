@@ -8,7 +8,7 @@ CREATE DATABASE basket;
       birthdate TIME NOT NULL,
       PRIMARY KEY(id)
    );
-
+   
    CREATE TABLE Franchise(
       id VARCHAR(50) ,
       franchise_name VARCHAR(50) ,
