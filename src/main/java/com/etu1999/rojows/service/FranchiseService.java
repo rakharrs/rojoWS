@@ -28,8 +28,6 @@ public class FranchiseService {
         return franchiseRepository.findPlayerByFranchiseId(id);
     }
 
-    
-
     public List<Game> findHomeGameByFranchiseId(String id_franchise){
         return gameRepository.findHomeGameByFranchiseId(id_franchise);
     }

@@ -14,12 +14,12 @@ public interface GameRepository extends JpaRepository<Game, String> {
     boolean existsByIdIgnoreCase(String id);
 
     public List<Game> findBySeason_id(String id_season);
-    @Query("select * from game where id_franchise1 = :franchiseId or id_franchise2 = :franchiseId")
+    @Query("select g from game g where franchise1.id = :franchiseId or franchise2.id = :franchiseId")
     public List<Game> findGameByFranchiseId(@Param("franchiseId") String id_franchise);
 
-    @Query("select * from game where id_franchise1 = :franchiseId")
+    @Query("select g from game g where franchise1.id = :franchiseId")
     public List<Game> findOutsideGameByFranchiseId(@Param("franchiseId") String id_franchise);
 
-    @Query("select * from game where id_franchise2 = :franchiseId")
+    @Query("select g from game g where franchise2.id = :franchiseId")
     public List<Game> findHomeGameByFranchiseId(@Param("franchiseId") String id_franchise);
 }

@@ -14,7 +14,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@Entity
+@Entity(name = "game")
 @Getter
 @Setter
 public class Game {
