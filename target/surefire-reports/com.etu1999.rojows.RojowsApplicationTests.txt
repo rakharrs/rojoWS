@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.etu1999.rojows.RojowsApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.395 s - in com.etu1999.rojows.RojowsApplicationTests

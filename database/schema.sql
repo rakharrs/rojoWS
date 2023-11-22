@@ -1,11 +1,11 @@
 CREATE DATABASE basket;
-\C basket;
+\c basket
 
    CREATE TABLE Player(
       id VARCHAR(50) ,
       last_name VARCHAR(50)  NOT NULL,
       first_name VARCHAR(50)  NOT NULL,
-      birthdate TIME NOT NULL,
+      birthdate DATE NOT NULL,
       PRIMARY KEY(id)
    );
 

@@ -1,0 +1,17 @@
+com\etu1999\rojows\repository\PlayerFranchiseRepository.class
+com\etu1999\rojows\domain\Franchise.class
+com\etu1999\rojows\repository\PlayerRepository.class
+com\etu1999\rojows\domain\Game.class
+com\etu1999\rojows\repository\ActionRepository.class
+com\etu1999\rojows\service\FranchiseService.class
+com\etu1999\rojows\repository\FranchiseRepository.class
+com\etu1999\rojows\domain\Statistics.class
+com\etu1999\rojows\domain\Season.class
+com\etu1999\rojows\repository\SeasonRepository.class
+com\etu1999\rojows\RojowsApplication.class
+com\etu1999\rojows\controller\FranchiseController.class
+com\etu1999\rojows\repository\GameRepository.class
+com\etu1999\rojows\domain\Action.class
+com\etu1999\rojows\domain\Player.class
+com\etu1999\rojows\repository\StatisticsRepository.class
+com\etu1999\rojows\domain\PlayerFranchise.class

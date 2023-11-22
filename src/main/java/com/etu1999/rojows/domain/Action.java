@@ -3,10 +3,7 @@ package com.etu1999.rojows.domain;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 
-import java.util.List;
-import java.util.Set;
 import lombok.Getter;
 import lombok.Setter;
 

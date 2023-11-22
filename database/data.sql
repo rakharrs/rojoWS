@@ -69,7 +69,7 @@ VALUES
   ('10', 'PLAY0005', '2017-06-22', 'FRCH0001'); -- Kyle Kuzma to Lakers
 
 -- Inserting data into the Game table
-INSERT INTO Game (id, id_franchise_1, id_franchise_2, id_saison)
+INSERT INTO Game (id, id_franchise1, id_franchise2, id_season)
 VALUES
   ('GAME0001', 'FRCH0001', 'FRCH0002', 'SEASON0001'),  -- Lakers vs. Celtics in Season 1
   ('GAME0002', 'FRCH0002', 'FRCH0001', 'SEASON0001'),  -- Celtics vs. Lakers in Season 1
